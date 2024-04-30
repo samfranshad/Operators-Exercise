@@ -2,6 +2,12 @@
 {
     public class Program
     {
+
+        public static double AreaOfCircle(double radius)
+        {
+            return Math.PI * Math.Pow(radius, 2);
+        }
+
         static void Main(string[] args)
         {
             int a = 17;
@@ -18,6 +24,11 @@
             int remainder = c % d;
 
             Console.WriteLine($"{c}/{d} is {quotient} remainder {remainder}");
+
+            Console.WriteLine("Please enter the radius of the circle:");
+            double radius = double.Parse(Console.ReadLine());
+            double circleArea = AreaOfCircle(radius);
+            Console.WriteLine($"The area of a circle with radius of {radius} is {circleArea}");
         }
     }
 }
